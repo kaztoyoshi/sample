@@ -5,7 +5,7 @@ namespace
 {
 	static const char*		WLWND_NAME		= "WINDOW_NAME";
 	static const char*		WLWND_PROP		= "WINDOW_PROP";
-	static const char*		ERROR_MUTEX		= "ã™ã§ã«èµ·å‹•ã—ã¦ã„ã¾ã™ã€‚";
+	static const char*		ERROR_MUTEX		= "‚·‚Å‚É‹N“®‚µ‚Ä‚¢‚Ü‚·B";
 	static const int		nDefaultSizeX	= 640;
 	static const int		nDefaultSizeY	= 480;
 }
@@ -62,29 +62,29 @@ BOOL CWLWnd::InitWindow( const HINSTANCE hInstance, const int nState, const bool
 		return EXIT_FAILURE;
 	}
 
-	WNDCLASS			wc;														// ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚¯ãƒ©ã‚¹
+	WNDCLASS			wc;														// ƒEƒCƒ“ƒhƒEƒNƒ‰ƒX
 	wc.style				= CS_HREDRAW | CS_VREDRAW;
-	wc.lpfnWndProc			= static_cast<WNDPROC>( WndProc );					// ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’å—ã‘å–ã‚‹ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦é–¢æ•°
+	wc.lpfnWndProc			= static_cast<WNDPROC>( WndProc );					// ƒƒbƒZ[ƒW‚ğó‚¯æ‚éƒEƒCƒ“ƒhƒEŠÖ”
 	wc.cbClsExtra			= 0;
 	wc.cbWndExtra			= 0;
 	wc.hInstance			= m_hInst;
-	wc.hIcon				= m_hIcon;											// ã‚¢ã‚¤ã‚³ãƒ³ç™»éŒ²
-	wc.hCursor				= m_hCur;											// ã‚«ãƒ¼ã‚½ãƒ«ç™»éŒ²
+	wc.hIcon				= m_hIcon;											// ƒAƒCƒRƒ““o˜^
+	wc.hCursor				= m_hCur;											// ƒJ[ƒ\ƒ‹“o˜^
 	wc.hbrBackground		= static_cast<HBRUSH>( ::CreateSolidBrush( m_nBackground ) );
-	wc.lpszMenuName			= m_szWndMenu;										// ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®ç™»éŒ²
+	wc.lpszMenuName			= m_szWndMenu;										// ƒƒjƒ…[‚Ì“o˜^
 	wc.lpszClassName		= m_szWndName;
 	if( !::RegisterClass( &wc ) ) return EXIT_FAILURE;
 
-	m_hWnd = ::CreateWindow( m_szWndName,										// ã‚¯ãƒ©ã‚¹å
-							 m_szWndTitle,										// ã‚¿ã‚¤ãƒˆãƒ«å
-							 m_dwWndStyle,										// ã‚¹ã‚¿ã‚¤ãƒ«
-							 m_nWndPosX,										// ï¼¸åº§æ¨™
-							 m_nWndPosY,										// ï¼¹åº§æ¨™
-							 m_nWndSizeX,										// æ¨ªå¹…
-							 m_nWndSizeY,										// é«˜ã•
-							 m_hOwnWnd,											// è¦ªã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã®ãƒãƒ³ãƒ‰ãƒ«
-							 NULL,												// ãƒ¡ãƒ‹ãƒ¥ãƒ¼ãƒãƒ³ãƒ‰ãƒ«
-							 m_hInst,											// ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãƒãƒ³ãƒ‰ãƒ«
+	m_hWnd = ::CreateWindow( m_szWndName,										// ƒNƒ‰ƒX–¼
+							 m_szWndTitle,										// ƒ^ƒCƒgƒ‹–¼
+							 m_dwWndStyle,										// ƒXƒ^ƒCƒ‹
+							 m_nWndPosX,										// ‚wÀ•W
+							 m_nWndPosY,										// ‚xÀ•W
+							 m_nWndSizeX,										// ‰¡•
+							 m_nWndSizeY,										// ‚‚³
+							 m_hOwnWnd,											// eƒEƒCƒ“ƒhƒE‚Ìƒnƒ“ƒhƒ‹
+							 NULL,												// ƒƒjƒ…[ƒnƒ“ƒhƒ‹
+							 m_hInst,											// ƒCƒ“ƒXƒ^ƒ“ƒXƒnƒ“ƒhƒ‹
 							 NULL );											// lParam
 	RenewalWindow();
 

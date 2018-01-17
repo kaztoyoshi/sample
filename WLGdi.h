@@ -21,11 +21,11 @@ public:
 	const HDC GetWorkGDI( void ) const;
 
 private:
-	HWND				m_hWnd;													// ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ãƒãƒ³ãƒ‰ãƒ«
-	HDC					m_hdcMain;												// è¡¨ç¤ºç”¨ãƒ‡ãƒã‚¤ã‚¹ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆ
-	HDC					m_hdcWork;												// ä½œæ¥­ç”¨ãƒ‡ãƒã‚¤ã‚¹ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆ
-	int					m_nWidth;												// æç”»é ˜åŸŸã®æ¨ªå¹…
-	int					m_nHeight;												// æç”»é ˜åŸŸã®é«˜ã•
+	HWND				m_hWnd;													// ƒEƒCƒ“ƒhƒEƒnƒ“ƒhƒ‹
+	HDC					m_hdcMain;												// •\Ž¦—pƒfƒoƒCƒXƒRƒ“ƒeƒLƒXƒg
+	HDC					m_hdcWork;												// ì‹Æ—pƒfƒoƒCƒXƒRƒ“ƒeƒLƒXƒg
+	int					m_nWidth;												// •`‰æ—Ìˆæ‚Ì‰¡•
+	int					m_nHeight;												// •`‰æ—Ìˆæ‚Ì‚‚³
 };
 
 }

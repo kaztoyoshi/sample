@@ -20,8 +20,8 @@ class CNCCamera
 private:
 	static const int	TIMER_COUNT		= 10;
 public:
-	static const int	CAMERA_WIDTH	= 160;									// æ¨ªå¹…
-	static const int	CAMERA_HEIGHT	= 120;									// é«˜ã•
+	static const int	CAMERA_WIDTH	= 160;									// ‰¡•
+	static const int	CAMERA_HEIGHT	= 120;									// ‚‚³
 
 private:
 	static unsigned __stdcall InitThread( void *pVoid );
@@ -36,12 +36,12 @@ public:
 	BOOL Release( void );
 
 private:
-	HMODULE			m_hModule;													// ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
-	BOOL			m_bExec;													// å®Ÿè¡Œãƒ•ãƒ©ã‚°
-	char			m_cNick[ NAME_MAX ];										// ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ 
-	int				m_nTimer;													// å†ç”Ÿã‚«ã‚¦ãƒ³ãƒˆ
-	HWND			m_hOwn;														// è¦ªã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ãƒãƒ³ãƒ‰ãƒ«
-	RECT			m_rcSize;													// ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚µã‚¤ã‚º
+	HMODULE			m_hModule;													// ƒ‚ƒWƒ…[ƒ‹
+	BOOL			m_bExec;													// Àsƒtƒ‰ƒO
+	char			m_cNick[ NAME_MAX ];										// ƒjƒbƒNƒl[ƒ€
+	int				m_nTimer;													// Ä¶ƒJƒEƒ“ƒg
+	HWND			m_hOwn;														// eƒEƒCƒ“ƒhƒEƒnƒ“ƒhƒ‹
+	RECT			m_rcSize;													// ƒEƒCƒ“ƒhƒEƒTƒCƒY
 	CV_INIT			cvInit;
 	CV_PLAY			cvPlay;
 	CV_ENCODE		cvEncode;

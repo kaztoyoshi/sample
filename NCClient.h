@@ -3,7 +3,7 @@
 #define __NCCLIENT_INCLUDE__
 
 #define WIN32_LEAN_AND_MEAN
-#define _WIN32_WINNT		0x0501												// WindowsXP‰ª•‰∏ä
+#define _WIN32_WINNT		0x0501												// WindowsXPà»è„
 
 #include <windows.h>
 #include <winsock2.h>

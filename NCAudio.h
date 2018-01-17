@@ -60,11 +60,11 @@ public:
 	void End( void ){ m_SWav.m_bState = FALSE; }
 
 private:
-	SWav			m_SWav;														// å…¥åŠ›
-	float			*m_pBuf[ BUFFER_MAX ][ 2 ];									// è»¢é€ãƒ‡ãƒ¼ã‚¿
-	int				m_nBufSize;													// ãƒãƒƒãƒ•ã‚¡ã‚µã‚¤ã‚º
-	int				m_nWrite;													// æ›¸è¾¼ã‚«ã‚¦ãƒ³ãƒˆ
-	int				m_nRead;													// èª­è¾¼ã‚«ã‚¦ãƒ³ãƒˆ
+	SWav			m_SWav;														// “ü—Í
+	float			*m_pBuf[ BUFFER_MAX ][ 2 ];									// “]‘—ƒf[ƒ^
+	int				m_nBufSize;													// ƒoƒbƒtƒ@ƒTƒCƒY
+	int				m_nWrite;													// ‘ƒJƒEƒ“ƒg
+	int				m_nRead;													// “ÇƒJƒEƒ“ƒg
 };
 
 class CNCWavOut
@@ -83,7 +83,7 @@ public:
 	void End( void ){ m_SWav.m_bState = FALSE; }
 
 private:
-	SWav			m_SWav;														// å‡ºåŠ›
+	SWav			m_SWav;														// o—Í
 };
 
 }

@@ -10,10 +10,10 @@ namespace	NetConfer
 class CNCConnect
 {
 private:
-	static const int	UDP_TIMEWAIT	= 10;									// 10mså¾…ã¡
-	static const int	UDP_BUFFMAX		= 64+(256*5)+64;						// UDPé€å—ä¿¡ã‚µã‚¤ã‚º(1408B)
-	static const int	UDP_BUFFARY		= 128;									// UDPé…åˆ—æ•°
-	static const int	BLOCK_MAX		= 256 * 5;								// è»¢é€ã‚µã‚¤ã‚º
+	static const int	UDP_TIMEWAIT	= 10;									// 10ms‘Ò‚¿
+	static const int	UDP_BUFFMAX		= 64+(256*5)+64;						// UDP‘—óMƒTƒCƒY(1408B)
+	static const int	UDP_BUFFARY		= 128;									// UDP”z—ñ”
+	static const int	BLOCK_MAX		= 256 * 5;								// “]‘—ƒTƒCƒY
 
 private:
 	static unsigned __stdcall UDPConnect( void *pVoid );
@@ -27,18 +27,18 @@ public:
 	void UDPWrite( const BYTE byData[] );
 
 private:
-	WSADATA			m_wsaData;													// WSADATAæ§‹é€ ä½“
-	int				m_nRes;														// è¿”å€¤
-	BOOL			m_bEndFlag;													// åˆ‡æ–­ãƒ•ãƒ©ã‚°
-	BOOL			m_bConn;													// æ¥ç¶šãƒ•ãƒ©ã‚°
-	char			m_cAddr[ TEXT_MAX ];										// ã‚¢ãƒ‰ãƒ¬ã‚¹
-	int				m_nPort;													// ãƒãƒ¼ãƒˆç•ªå·
-	BYTE			m_byUDPRecv[ UDP_BUFFARY ][ UDP_BUFFMAX ];					// UDPå—ä¿¡ãƒãƒƒãƒ•ã‚¡
-	int				m_nURRead;													// UDPå—ä¿¡èª­ã¿è¾¼ã¿ä½ç½®ï¼ˆå¾Œï¼‰
-	int				m_nURWrite;													// UDPå—ä¿¡æ›¸ãè¾¼ã¿ä½ç½®ï¼ˆå…ˆï¼‰
-	BYTE			m_byUDPSend[ UDP_BUFFARY ][ UDP_BUFFMAX ];					// UDPé€ä¿¡ãƒãƒƒãƒ•ã‚¡
-	int				m_nUSRead;													// UDPé€ä¿¡èª­ã¿è¾¼ã¿ä½ç½®ï¼ˆå¾Œï¼‰
-	int				m_nUSWrite;													// UDPé€ä¿¡æ›¸ãè¾¼ã¿ä½ç½®ï¼ˆå…ˆï¼‰
+	WSADATA			m_wsaData;													// WSADATA\‘¢‘Ì
+	int				m_nRes;														// •Ô’l
+	BOOL			m_bEndFlag;													// Ø’fƒtƒ‰ƒO
+	BOOL			m_bConn;													// Ú‘±ƒtƒ‰ƒO
+	char			m_cAddr[ TEXT_MAX ];										// ƒAƒhƒŒƒX
+	int				m_nPort;													// ƒ|[ƒg”Ô†
+	BYTE			m_byUDPRecv[ UDP_BUFFARY ][ UDP_BUFFMAX ];					// UDPóMƒoƒbƒtƒ@
+	int				m_nURRead;													// UDPóM“Ç‚İ‚İˆÊ’uiŒãj
+	int				m_nURWrite;													// UDPóM‘‚«‚İˆÊ’uiæj
+	BYTE			m_byUDPSend[ UDP_BUFFARY ][ UDP_BUFFMAX ];					// UDP‘—Mƒoƒbƒtƒ@
+	int				m_nUSRead;													// UDP‘—M“Ç‚İ‚İˆÊ’uiŒãj
+	int				m_nUSWrite;													// UDP‘—M‘‚«‚İˆÊ’uiæj
 };
 
 }

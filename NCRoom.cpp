@@ -13,13 +13,13 @@ LRESULT CNCRoom::WindowProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam 
 		{
 			m_CCon.SetEndFlag( TRUE );
 			SetEndFlag( TRUE );
-			::PostQuitMessage( 0 );													// WM_QUITã‚’é€ã‚‹
+			::PostQuitMessage( 0 );													// WM_QUIT‚ğ‘—‚é
 		}
 		break;
 	default:
 		return ::DefWindowProc( hWnd, uMsg, wParam, lParam );
 	}
-	// ã“ã®å‘½ä»¤ãŒãªããªã‚‹ã¨ç§»å‹•ãƒ»æ‹¡ç¸®ãŒã§ããªããªã‚‹
+	// ‚±‚Ì–½—ß‚ª‚È‚­‚È‚é‚ÆˆÚ“®EŠgk‚ª‚Å‚«‚È‚­‚È‚é
 	return ::DefWindowProc( hWnd, uMsg, wParam, lParam );
 	return 0L;
 }

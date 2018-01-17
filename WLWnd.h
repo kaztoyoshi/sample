@@ -9,7 +9,7 @@ namespace	WLWnd
 {
 
 #pragma once
-static const int	WINDOWCHAR			= 64;									// 譁�蟄怜ｮ壽焚
+static const int	WINDOWCHAR			= 64;									// 文字定数
 
 class CWLWnd
 {
@@ -35,22 +35,22 @@ public:
 	void RenewalWindow( const int nX, const int nY, const int nW, const int nH, const BOOL bFlag = TRUE );
 
 private:
-	HANDLE				m_hMutex;												// 螟夐㍾襍ｷ蜍暮亟豁｢繝上Φ繝峨Ν
-	HWND				m_hWnd;													// 繧ｦ繧､繝ｳ繝峨え繝上Φ繝峨Ν
-	HWND				m_hOwnWnd;												// 隕ｪ繧ｦ繧､繝ｳ繝峨え繝上Φ繝峨Ν
-	HINSTANCE			m_hInst;												// 繧､繝ｳ繧ｹ繧ｿ繝ｳ繧ｹ繝上Φ繝峨Ν
-	HCURSOR				m_hCur;													// 繧ｫ繝ｼ繧ｽ繝ｫ繝上Φ繝峨Ν
-	HICON				m_hIcon;												// 繧｢繧､繧ｳ繝ｳ繝上Φ繝峨Ν
-	int					m_nBackground;											// 閭梧勹濶ｲ
-	BOOL				m_bEndFlag;												// 邨ゆｺ�繝輔Λ繧ｰ
-	int					m_nWndSizeX, m_nWndSizeY;								// 繝ｭ繝ｼ繧ｫ繝ｫ繧ｦ繧､繝ｳ繝峨え縺ｮ螟ｧ縺阪＆
-	int					m_nWndPosX, m_nWndPosY;									// 繝ｭ繝ｼ繧ｫ繝ｫ繧ｦ繧､繝ｳ繝峨え縺ｮ菴咲ｽｮ
-	DWORD				m_dwWndStyle;											// 繧ｦ繧､繝ｳ繝峨え縺ｮ繧ｹ繧ｿ繧､繝ｫ
-	char				m_szWndName[ WINDOWCHAR ];								// 繧ｦ繧､繝ｳ繝峨え縺ｮ蜷榊燕
-	char				m_szWndTitle[ WINDOWCHAR ];								// 繧ｿ繧､繝医Ν縺ｮ蜷榊燕
-	char				m_szWndMenu[ WINDOWCHAR ];								// 繝｡繝九Η繝ｼ縺ｮ蜷榊燕
-	char				m_szWndCursor[ WINDOWCHAR ];							// 繧ｫ繝ｼ繧ｽ繝ｫ縺ｮ蜷榊燕
-	char				m_szWndIcon[ WINDOWCHAR ];								// 繧｢繧､繧ｳ繝ｳ縺ｮ蜷榊燕
+	HANDLE				m_hMutex;												// 多重起動防止ハンドル
+	HWND				m_hWnd;													// ウインドウハンドル
+	HWND				m_hOwnWnd;												// 親ウインドウハンドル
+	HINSTANCE			m_hInst;												// インスタンスハンドル
+	HCURSOR				m_hCur;													// カーソルハンドル
+	HICON				m_hIcon;												// アイコンハンドル
+	int					m_nBackground;											// 背景色
+	BOOL				m_bEndFlag;												// 終了フラグ
+	int					m_nWndSizeX, m_nWndSizeY;								// ローカルウインドウの大きさ
+	int					m_nWndPosX, m_nWndPosY;									// ローカルウインドウの位置
+	DWORD				m_dwWndStyle;											// ウインドウのスタイル
+	char				m_szWndName[ WINDOWCHAR ];								// ウインドウの名前
+	char				m_szWndTitle[ WINDOWCHAR ];								// タイトルの名前
+	char				m_szWndMenu[ WINDOWCHAR ];								// メニューの名前
+	char				m_szWndCursor[ WINDOWCHAR ];							// カーソルの名前
+	char				m_szWndIcon[ WINDOWCHAR ];								// アイコンの名前
 };
 
 }

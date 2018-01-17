@@ -21,27 +21,27 @@ struct SData
 	{
 	}
 
-	BYTE*			pData;														// ãƒ‡ãƒ¼ã‚¿
-	int				nTotal;														// å…¨ä½“ã‚µã‚¤ã‚º
-	int				nStart;														// é–‹å§‹ä½ç½®
-	int				nBlock;														// è»¢é€ã‚µã‚¤ã‚º
-	BOOL			bFlag;														// ãƒ•ãƒ©ã‚°
+	BYTE*			pData;														// ƒf[ƒ^
+	int				nTotal;														// ‘S‘ÌƒTƒCƒY
+	int				nStart;														// ŠJnˆÊ’u
+	int				nBlock;														// “]‘—ƒTƒCƒY
+	BOOL			bFlag;														// ƒtƒ‰ƒO
 };
 
 class CNCRoom : public WLWnd::CWLWnd
 {
 private:
-	static const int	ID_TIMER		= 30001;								// ã‚¿ã‚¤ãƒãƒ¼ï¼©ï¼¤
-	static const int	TIMEOUT_VALUE	= 10;									// ã‚¿ã‚¤ãƒãƒ¼( 1000 / 60 )
-	static const int	USER_MAX		= 1;									// ãƒ¦ãƒ¼ã‚¶ãƒ¼ç·æ•°
-	static const int	UDP_BUFFMAX		= 64+(256*5)+64;						// UDPé€å—ä¿¡ã‚µã‚¤ã‚º(1408B)
-	static const int	BLOCK_MAX		= 256 * 5;								// è»¢é€ã‚µã‚¤ã‚º
-	static const int	ROOM_WIDTH		= 160;									// ä¼šè­°å®¤ã®æ¨ªå¹…
-	static const int	ROOM_HEIGHT		= 120;									// ä¼šè­°å®¤ã®é«˜ã•
-	static const int	WINDOW_WIDTH	= ( ROOM_WIDTH * 3 );					// å…¨ä½“ã®æ¨ªå¹…
-	static const int	WINDOW_HEIGHT	= ( ROOM_HEIGHT * 3 );					// å…¨ä½“ã®é«˜ã•
+	static const int	ID_TIMER		= 30001;								// ƒ^ƒCƒ}[‚h‚c
+	static const int	TIMEOUT_VALUE	= 10;									// ƒ^ƒCƒ}[( 1000 / 60 )
+	static const int	USER_MAX		= 1;									// ƒ†[ƒU[‘”
+	static const int	UDP_BUFFMAX		= 64+(256*5)+64;						// UDP‘—óMƒTƒCƒY(1408B)
+	static const int	BLOCK_MAX		= 256 * 5;								// “]‘—ƒTƒCƒY
+	static const int	ROOM_WIDTH		= 160;									// ‰ï‹cº‚Ì‰¡•
+	static const int	ROOM_HEIGHT		= 120;									// ‰ï‹cº‚Ì‚‚³
+	static const int	WINDOW_WIDTH	= ( ROOM_WIDTH * 3 );					// ‘S‘Ì‚Ì‰¡•
+	static const int	WINDOW_HEIGHT	= ( ROOM_HEIGHT * 3 );					// ‘S‘Ì‚Ì‚‚³
 
-	#define PROCNAME	"Net Conference - Client"								// ãƒ—ãƒ­ã‚°ãƒ©ãƒ å
+	#define PROCNAME	"Net Conference - Client"								// ƒvƒƒOƒ‰ƒ€–¼
 
 private:
 	virtual LRESULT WindowProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam );
@@ -61,30 +61,30 @@ public:
 	void End( void );
 
 private:
-	WLGdi::CWLGdi	*m_pGdi;													// ãƒ‡ãƒã‚¤ã‚¹ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆã‚¯ãƒ©ã‚¹
-	HWND			m_hWnd;														// ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ãƒãƒ³ãƒ‰ãƒ«
-	HDC				m_hdcWork;													// ä½œæ¥­ç”¨ãƒ‡ãƒã‚¤ã‚¹ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆ
-	HPEN			m_hPen;														// ãƒ©ã‚¤ãƒ³è¡¨ç¤ºç”¨
-	CNCConnect		m_CCon;														// æ¥ç¶šç®¡ç†ã‚¯ãƒ©ã‚¹
-	CNCCamera		m_CCap;														// ã‚«ãƒ¡ãƒ©ç®¡ç†ã‚¯ãƒ©ã‚¹
-	BOOL			m_bCamera;													// ã‚«ãƒ¡ãƒ©ä½¿ç”¨ãƒ•ãƒ©ã‚°
-	CNCWavIn		m_CWavIn;													// éŸ³å£°ç®¡ç†ã‚¯ãƒ©ã‚¹
-	SData			m_SJpg;														// JPGæ§‹é€ ä½“
-	SData			m_SSnd;														// SNDæ§‹é€ ä½“
-	char			m_cAddr[ TEXT_MAX ];										// IPï½±ï¾„ï¾ï¾šï½½
-	int				m_nPort;													// ï¾ï¾Ÿï½°ï¾„ç•ªå·
-	char			m_szNickName[ NAME_MAX ];									// ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ 
-	CNCUser			m_CUser0;													// è‡ªåˆ†
-	CNCUser			m_CUser1;													// ä»–äººï¼‘
-	CNCUser			m_CUser2;													// ä»–äººï¼’
-	CNCUser			m_CUser3;													// ä»–äººï¼“
-	CNCUser			m_CUser4;													// ä»–äººï¼”
-	CNCUser			m_CUser5;													// ä»–äººï¼•
-	CNCUser			m_CUser6;													// ä»–äººï¼–
-	CNCUser			m_CUser7;													// ä»–äººï¼—
-	CNCUser			m_CUser8;													// ä»–äººï¼˜
-	CNCUser			*m_pUser[ USER_MAX ];										// ãƒ¦ãƒ¼ã‚¶ãƒ¼ç®¡ç†ã‚¯ãƒ©ã‚¹é…åˆ—
-	CNCUser			*m_pHost;													// ä¸»å‚¬è€…ã®ã‚¢ãƒ‰ãƒ¬ã‚¹
+	WLGdi::CWLGdi	*m_pGdi;													// ƒfƒoƒCƒXƒRƒ“ƒeƒLƒXƒgƒNƒ‰ƒX
+	HWND			m_hWnd;														// ƒEƒCƒ“ƒhƒEƒnƒ“ƒhƒ‹
+	HDC				m_hdcWork;													// ì‹Æ—pƒfƒoƒCƒXƒRƒ“ƒeƒLƒXƒg
+	HPEN			m_hPen;														// ƒ‰ƒCƒ“•\¦—p
+	CNCConnect		m_CCon;														// Ú‘±ŠÇ—ƒNƒ‰ƒX
+	CNCCamera		m_CCap;														// ƒJƒƒ‰ŠÇ—ƒNƒ‰ƒX
+	BOOL			m_bCamera;													// ƒJƒƒ‰g—pƒtƒ‰ƒO
+	CNCWavIn		m_CWavIn;													// ‰¹ºŠÇ—ƒNƒ‰ƒX
+	SData			m_SJpg;														// JPG\‘¢‘Ì
+	SData			m_SSnd;														// SND\‘¢‘Ì
+	char			m_cAddr[ TEXT_MAX ];										// IP±ÄŞÚ½
+	int				m_nPort;													// Îß°Ä”Ô†
+	char			m_szNickName[ NAME_MAX ];									// ƒjƒbƒNƒl[ƒ€
+	CNCUser			m_CUser0;													// ©•ª
+	CNCUser			m_CUser1;													// ‘¼l‚P
+	CNCUser			m_CUser2;													// ‘¼l‚Q
+	CNCUser			m_CUser3;													// ‘¼l‚R
+	CNCUser			m_CUser4;													// ‘¼l‚S
+	CNCUser			m_CUser5;													// ‘¼l‚T
+	CNCUser			m_CUser6;													// ‘¼l‚U
+	CNCUser			m_CUser7;													// ‘¼l‚V
+	CNCUser			m_CUser8;													// ‘¼l‚W
+	CNCUser			*m_pUser[ USER_MAX ];										// ƒ†[ƒU[ŠÇ—ƒNƒ‰ƒX”z—ñ
+	CNCUser			*m_pHost;													// åÃÒ‚ÌƒAƒhƒŒƒX
 };
 
 }

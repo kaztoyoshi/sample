@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Êó•Êú¨Ë™û resources
+// ì˙ñ{åÍ resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
 #ifdef _WIN32
@@ -58,9 +58,9 @@ CAPTION "Net Conference - Client"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     PUSHBUTTON      "OK",IDC_BUTTON1,9,41,50,14
-    LTEXT           "„Éã„ÉÉ„ÇØ„Éç„Éº„É†",IDC_STATIC,12,8,56,8
+    LTEXT           "ÉjÉbÉNÉlÅ[ÉÄ",IDC_STATIC,12,8,56,8
     EDITTEXT        IDC_EDIT1,10,23,135,14,ES_AUTOHSCROLL
-    PUSHBUTTON      "ÁµÇ‰∫Ü",IDC_BUTTON2,96,41,50,14
+    PUSHBUTTON      "èIóπ",IDC_BUTTON2,96,41,50,14
 END
 
 
@@ -82,7 +82,7 @@ BEGIN
 END
 #endif    // APSTUDIO_INVOKED
 
-#endif    // Êó•Êú¨Ë™û resources
+#endif    // ì˙ñ{åÍ resources
 /////////////////////////////////////////////////////////////////////////////
 
 

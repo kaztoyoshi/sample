@@ -1,14 +1,14 @@
 #include "NCClient.h"
 #include "NCRoom.h"
 
-char	g_szNickName[ NAME_MAX ];												// 繝九ャ繧ｯ繝阪�ｼ繝
+char	g_szNickName[ NAME_MAX ];												// ニックネーム
 
 LRESULT CALLBACK DialogProc( HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam )
 {
 	switch( msg )
 	{
 	case WM_INITDIALOG:
-		::SetDlgItemText( hWnd, IDC_EDIT1, "蜷榊燕逋ｻ骭ｲ" );
+		::SetDlgItemText( hWnd, IDC_EDIT1, "名前登録" );
 		return FALSE;
 	case WM_COMMAND:
 		switch( LOWORD( wParam ) )
@@ -33,7 +33,6 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 {
 	MSG		msg;
 	NetConfer::CNCRoom Room;
-//	const char* cAddr = "59.106.122.105";
 	const char* cAddr = "227.192.1.2";
 	const int nPort = 44800;
 

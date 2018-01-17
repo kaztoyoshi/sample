@@ -24,21 +24,21 @@ public:
 	void Audio( const int& nTotal, const int& nStart, const int& nBlock, const BYTE byData[] );
 
 private:
-	BOOL			m_bUsed;													// ä½¿ç”¨ãƒ•ãƒ©ã‚°
-	HDC				m_hDC;														// ãƒ‡ãƒã‚¤ã‚¹ã‚³ãƒ³ãƒ†ã‚­ã‚¹ãƒˆ
-	int				m_nPosX;													// è¡¨ç¤ºï¼¸åº§æ¨™
-	int				m_nPosY;													// è¡¨ç¤ºï¼¹åº§æ¨™
-	char			m_szNickName[ NAME_MAX ];									// ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ 
-	BITMAPINFO		m_Bmi;														// BMPæƒ…å ±
-	HBITMAP			m_hBmp[ 2 ];												// BMPãƒãƒ³ãƒ‰ãƒ«
-	LPBYTE			m_lpBuf[ 2 ];												// BMPãƒ‡ãƒ¼ã‚¿
-	int				m_nDispRead;												// è¡¨ç¤ºèª­è¾¼åˆ‡æ›¿
-	int				m_nDispWrite;												// è¡¨ç¤ºæ›¸è¾¼åˆ‡æ›¿
-	BYTE*			m_pCamera;													// ã‚«ãƒ¡ãƒ©ãƒ‡ãƒ¼ã‚¿
-	HMODULE			m_hModule;													// ãƒ¢ã‚¸ãƒ¥ãƒ¼ãƒ«
+	BOOL			m_bUsed;													// Žg—pƒtƒ‰ƒO
+	HDC				m_hDC;														// ƒfƒoƒCƒXƒRƒ“ƒeƒLƒXƒg
+	int				m_nPosX;													// •\Ž¦‚wÀ•W
+	int				m_nPosY;													// •\Ž¦‚xÀ•W
+	char			m_szNickName[ NAME_MAX ];									// ƒjƒbƒNƒl[ƒ€
+	BITMAPINFO		m_Bmi;														// BMPî•ñ
+	HBITMAP			m_hBmp[ 2 ];												// BMPƒnƒ“ƒhƒ‹
+	LPBYTE			m_lpBuf[ 2 ];												// BMPƒf[ƒ^
+	int				m_nDispRead;												// •\Ž¦“ÇžØ‘Ö
+	int				m_nDispWrite;												// •\Ž¦‘žØ‘Ö
+	BYTE*			m_pCamera;													// ƒJƒƒ‰ƒf[ƒ^
+	HMODULE			m_hModule;													// ƒ‚ƒWƒ…[ƒ‹
 	CV_DDECODE		cvDDecode;
-	CNCWavOut		m_CWavOut;													// éŸ³å£°ç®¡ç†ã‚¯ãƒ©ã‚¹
-	BYTE*			m_pAudio;													// éŸ³å£°ãƒ‡ãƒ¼ã‚¿
+	CNCWavOut		m_CWavOut;													// ‰¹ºŠÇ—ƒNƒ‰ƒX
+	BYTE*			m_pAudio;													// ‰¹ºƒf[ƒ^
 };
 
 }
