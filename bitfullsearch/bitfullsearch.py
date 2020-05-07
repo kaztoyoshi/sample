@@ -3,7 +3,8 @@
 
 print("要素数から考える")
 n = 5
-for bits in range(1<<n):
+size = 1<<n
+for bits in range(size):
     out = "{"
     for i in range(n):
         if(bits & (1 << i)):
@@ -14,7 +15,8 @@ for bits in range(1<<n):
 print("")
 print("配列から考える")
 arr = [5, 8, 2, 7, 4]
-for bits in range(1<<len(arr)):
+size = 1<<len(arr)
+for bits in range(size):
     out = "{"
     for i in range(n):
         if(bits & (1 << i)):
